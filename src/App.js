@@ -1,5 +1,5 @@
 
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter, Routes, Route} from "react-router-dom";
 import Home from "./nawigajca";
 import Lab7 from "./Lab7/page";
 import Lab8 from "./Lab8/page";
@@ -14,7 +14,7 @@ import Page404 from "./404/page";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lab7" element={<Lab7 />} />
@@ -26,7 +26,7 @@ function App() {
         <Route path="/lab9/Kontakt" element={<Kontakt />} />
         <Route path="*" element={<Page404 />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
